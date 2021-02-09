@@ -1,0 +1,29 @@
+<form action=“index.php” method=“post”>
+<input type="hidden" value="<?php echo $_POST['handlename'];?>" name="handlename">
+<input type="hidden" value="<?php echo $_POST['title'];?>" name="title">
+<input type="hidden" value="<?php echo $_POST['comments'];?>" name="comments">
+</form>
+
+//<footer>Copyright D.I.works|D.I.blog is the one which provides A to Z about programming</footer>
+
+
+while($row=$stmt->fetch()){
+                echo"<div class='kiji'>";
+                echo"<h3>".$row['title']."</h3>";
+                echo"<div class='contents'>";
+                echo $row['comments'];
+                echo"<div class='handlename'>posted by".$row['handlename']."</div>";
+                echo"</div>";
+                echo"</div>";
+            }
+
+
+while($row=$stmt->fetch()){
+                echo $row['title'];
+                echo $row['comments'];
+                echo $row['handlename'];
+            }
+
+            <div class="confirm"></div>
+
+http://localhost/diworks_keijiban/index.php
